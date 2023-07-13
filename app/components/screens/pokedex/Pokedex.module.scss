@@ -1,0 +1,11 @@
+.h1 {
+    @apply text-center capitalize font-semibold mb-2;
+}
+
+.description {
+    @apply text-center font-dosis text-xl;
+}
+
+.row {
+    @apply h-fit w-full pt-5 pb-10;
+}

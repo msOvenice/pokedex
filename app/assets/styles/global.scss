@@ -1,0 +1,25 @@
+@import '/app/assets/styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Open+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply text-base text-black box-border font-open-sans;
+}
+
+h1 {
+    @apply text-4xl font-dosis uppercase tracking-widest mb-6;
+}
+
+h2 {
+    @apply text-2xl font-dosis capitalize tracking-widest mb-6;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    opacity: 0.2 !important;
+}
