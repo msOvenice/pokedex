@@ -23,15 +23,19 @@ const PokemonPage:FC = () => {
                 <p>error</p>
             : 
                 <Row>
-                    <Column size={3} isCenter={false}>
-                        <Pokemonitron pokemon={data} />
-                    </Column>
+                    {data && (
+                        <Column size={3} isCenter={false}>
+                            <Pokemonitron pokemon={data} />
+                        </Column>
+                    )}
                     <Column size={6} isCenter={true}>
                         <Image src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${data?.id}.png`} alt={pokemonName} width={550} height={493} />
                     </Column>
-                    <Column size={3} isCenter={false}>
-                        <Stats pokemon={data} />
-                    </Column>
+                    {data && (
+                        <Column size={3} isCenter={false}>
+                            <Stats pokemon={data} />
+                        </Column>
+                    )}
                 </Row>
             }
         </Layout>
